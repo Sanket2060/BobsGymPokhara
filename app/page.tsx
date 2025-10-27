@@ -1,5 +1,5 @@
 import Header from "@/components/header"
-import Hero from "@/components/hero"
+import HeroSplit from "@/components/hero-split"
 import Services from "@/components/services"
 import CelebrityVisits from "@/components/celebrity-visits"
 import GoogleRating from "@/components/google-rating"
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      <Hero />
+      <HeroSplit />
       <Services />
       <CelebrityVisits />
       <GoogleRating />
