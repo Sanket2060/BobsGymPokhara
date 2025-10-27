@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 const heroImages = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/girlsflexingbody.webp-WGv49fEAazz3qbybkS8VVlKK0G3xIf.jpeg",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/groupofboysflexingbody-kRBHd4n70SOwCCJG4IpCJ80jlqNhS6.jpg",
-]
+];
 
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -50,8 +50,8 @@ export default function Hero() {
             Transform Your <span className="text-primary">Body</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Join BobsGym and unlock your full potential with expert trainers, cutting-edge equipment, and a supportive
-            community
+            Join BobsGym and unlock your full potential with expert trainers,
+            cutting-edge equipment, and a supportive community
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -64,12 +64,12 @@ export default function Hero() {
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
-          </div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center p-2">
+          <div className="w-1 h-2 bg-primary rounded-full animate-pulse" />
         </div>
       </div>
 
@@ -80,11 +80,13 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrentImageIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentImageIndex ? "bg-primary w-8" : "bg-white/50 hover:bg-white/75"
+              index === currentImageIndex
+                ? "bg-primary w-8"
+                : "bg-white/50 hover:bg-white/75"
             }`}
           />
         ))}
       </div>
     </section>
-  )
+  );
 }
