@@ -1,27 +1,29 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Mail, Phone, MapPin, Send, Map } from "lucide-react"
-import { useState } from "react"
+import { Mail, Phone, MapPin, Send, Map } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", message: "" })
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-card">
@@ -46,16 +48,9 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-foreground">Location</h3>
-                <p className="text-muted-foreground">Lakecity, Pokhara, Nepal</p>
-                <a
-                  href="https://maps.app.goo.gl/ThzMEMvMgfyrefqu9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-2 text-primary hover:text-primary/80 transition-colors font-semibold text-sm"
-                >
-                  <Map size={16} />
-                  View on Google Maps
-                </a>
+                <p className="text-muted-foreground">
+                  Lakecity, Pokhara, Nepal
+                </p>
               </div>
             </div>
 
@@ -88,9 +83,15 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6 animate-slideInRight">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 animate-slideInRight"
+          >
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-foreground mb-2"
+              >
                 Full Name
               </label>
               <input
@@ -106,7 +107,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-foreground mb-2"
+              >
                 Email Address
               </label>
               <input
@@ -122,7 +126,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-foreground mb-2"
+              >
                 Message
               </label>
               <textarea
@@ -149,7 +156,7 @@ export default function Contact() {
 
         <div className="w-full h-96 rounded-2xl overflow-hidden border border-border shadow-lg animate-fadeInUp">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8894267890123!2d83.98!3d28.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995919d3e3e3e3d%3A0x3e3e3e3e3e3e3e3e!2sLakecity%2C%20Pokhara%2C%20Nepal!5e0!3m2!1sen!2snp!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3319.2434650444575!2d83.9619413!3d28.2040026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595004784e53f%3A0xc573154f3276293d!2sBobsGym%20Pokhara!0!3m2!1sen!2snp!4v1762079548063!5m2!1sen!2snp"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -160,5 +167,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
