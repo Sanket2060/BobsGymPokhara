@@ -40,7 +40,7 @@ export default function Contact() {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you. Contact us today!
+            If you want to join us, call us or fill out the form and we’ll get back to you.
           </p>
         </div>
 

@@ -30,8 +30,8 @@ export default function HeroSplit() {
             Achieve Your <span className="text-primary">Fitness</span> Goals
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
-            State-of-the-art equipment, expert trainers, and a community that
-            pushes you to be your best
+            The best gym in Pokhara for strength, fitness, and personal
+            training.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
