@@ -1,7 +1,14 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Facebook, Instagram, Twitter, Linkedin, Youtube, Music } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Youtube,
+  Music,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,13 +16,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
-          <div>
+          <div className="text-center">
             <h3 className="text-xl font-bold text-foreground mb-4">BobsGym</h3>
-            <p className="text-muted-foreground">Transform your body and mind with premium fitness solutions.</p>
+            <p className="text-muted-foreground">
+              Transform your body and mind with premium fitness solutions.
+            </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center">
             <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
@@ -25,7 +34,10 @@ export default function Footer() {
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -34,7 +46,7 @@ export default function Footer() {
           </div>
 
           {/* Hours */}
-          <div>
+          <div className="text-center">
             <h4 className="font-bold text-foreground mb-4">Hours</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
               <li>Mon - Fri: 6:00 AM - 10:00 PM</li>
@@ -44,16 +56,21 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div>
+          <div className="text-center">
             <h4 className="font-bold text-foreground mb-4">Follow Us</h4>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap justify-center">
               {[
-                { icon: Facebook, label: "Facebook", href: "#" },
-                { icon: Instagram, label: "Instagram", href: "#" },
-                { icon: Youtube, label: "YouTube", href: "#" },
+                {
+                  icon: Facebook,
+                  label: "Facebook",
+                  href: "https://www.facebook.com/bobsgymlakecity",
+                },
+                {
+                  icon: Instagram,
+                  label: "Instagram",
+                  href: "https://www.instagram.com/bobsgymlakecity",
+                },
                 { icon: Music, label: "TikTok", href: "#" },
-                { icon: Twitter, label: "Twitter", href: "#" },
-                { icon: Linkedin, label: "LinkedIn", href: "#" },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
@@ -69,20 +86,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Bottom */}
-        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© 2025 BobsGym. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 sm:mt-0">
-            <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Terms of Service
-            </Link>
-          </div>
-        </div>
       </div>
     </footer>
-  )
+  );
 }

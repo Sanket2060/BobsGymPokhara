@@ -13,7 +13,7 @@ export default function Home() {
       <Header />
       <HeroSplit />
       <Services />
-      <CelebrityVisits />
+      {/* <CelebrityVisits /> */}
       <Experience />
       <GoogleRating />
       <Testimonials />

@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -14,7 +14,7 @@ export default function Header() {
     { label: "Programs", href: "/programs" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
-  ]
+  ];
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50">
@@ -22,9 +22,16 @@ export default function Header() {
         <div className="flex justify-between items-center h-24">
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-20 h-20 relative">
-              <Image src="/images/design-mode/logo.jpg" alt="BobsGym Logo" fill className="object-contain" />
+              <Image
+                src="/images/design-mode/logo.jpg"
+                alt="BobsGym Logo"
+                fill
+                className="object-contain"
+              />
             </div>
-            <span className="text-2xl font-bold text-primary hidden sm:inline">BobsGym</span>
+            <span className="text-2xl font-bold text-primary hidden sm:inline">
+              BobsGym
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,13 +49,18 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">
-              Join Now
-            </button>
+            <Link href={"/contact"}>
+              <button className="px-6 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:cursor-pointer">
+                Join Now
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-foreground"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -73,5 +85,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

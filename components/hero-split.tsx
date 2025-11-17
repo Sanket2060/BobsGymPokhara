@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function HeroSplit() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -10,6 +11,8 @@ export default function HeroSplit() {
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/groupofboysflexingbody-kRBHd4n70SOwCCJG4IpCJ80jlqNhS6.jpg",
     "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/girlsflexingbody.webp-WGv49fEAazz3qbybkS8VVlKK0G3xIf.jpeg",
   ];
+
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,11 +35,21 @@ export default function HeroSplit() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 group">
+            <button
+              onClick={() => {
+                router.push("/contact");
+              }}
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 group hover:cursor-pointer"
+            >
               Join Now
               <ChevronRight className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-bold text-lg hover:bg-primary/10 transition-all duration-300">
+            <button
+              onClick={() => {
+                router.push("/pricing");
+              }}
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-bold text-lg hover:bg-primary/10 transition-all duration-300 hover:cursor-pointer"
+            >
               View Plans
             </button>
           </div>
