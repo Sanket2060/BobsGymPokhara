@@ -3,20 +3,21 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function PricingPage() {
   const pricingPlans = [
     {
       name: "1 Month Pass",
       duration: "1 Month",
-      price: "₹2,999",
+      price: "₹5,000",
       description: "Perfect for trying out our gym",
       features: ["Unlimited gym access", "All equipment access"],
     },
     {
       name: "3 Month Pass",
       duration: "3 Months",
-      price: "₹7,999",
+      price: "₹14,500",
       description: "Great for building momentum",
       features: ["Unlimited gym access", "All equipment access"],
       highlighted: true,
@@ -24,16 +25,16 @@ export default function PricingPage() {
     {
       name: "Annual Pass",
       duration: "12 Months",
-      price: "₹24,999",
+      price: "₹55,000",
       description: "Best value for committed fitness",
       features: ["Unlimited gym access", "All equipment access"],
     },
   ];
 
   const dayPasses = [
-    { days: "5 Days", price: "₹999", description: "Flexible weekly access" },
-    { days: "10 Days", price: "₹1,799", description: "Extended access" },
-    { days: "15 Days", price: "₹2,499", description: "Half month pass" },
+    { days: "1 Day", price: "₹800", description: "Try Bobs Gym" },
+    { days: "7 Days", price: "₹3,500", description: "Flexible weekly access" },
+    { days: "14 Days", price: "₹4,200", description: "Half month pass" },
   ];
 
   return (
@@ -136,6 +137,25 @@ export default function PricingPage() {
                   </button>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-20 pt-16 border-t border-border">
+            <div className="text-center">
+              <h3 className="text-3xl font-bold text-foreground mb-4">
+                Need More Details?
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Have questions about our pricing or looking for a customized
+                plan? Get in touch with our team and we'll help you find the
+                perfect fit.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </section>

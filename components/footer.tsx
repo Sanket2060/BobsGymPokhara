@@ -49,9 +49,8 @@ export default function Footer() {
           <div className="text-center">
             <h4 className="font-bold text-foreground mb-4">Hours</h4>
             <ul className="space-y-2 text-muted-foreground text-sm">
-              <li>Mon - Fri: 6:00 AM - 10:00 PM</li>
-              <li>Sat - Sun: 7:00 AM - 9:00 PM</li>
-              <li>Holidays: 8:00 AM - 6:00 PM</li>
+              <li>Sun - Fri: 5:30 AM - 9:00 PM</li>
+              <li>Sat : 7:00 AM - 12:00 PM</li>
             </ul>
           </div>
 
