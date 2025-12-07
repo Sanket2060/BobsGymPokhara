@@ -6,20 +6,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function HeroSplit() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/groupofboysflexingbody-kRBHd4n70SOwCCJG4IpCJ80jlqNhS6.jpg",
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/girlsflexingbody.webp-WGv49fEAazz3qbybkS8VVlKK0G3xIf.jpeg",
-  ];
 
   const router = useRouter();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative w-full h-screen flex items-center overflow-hidden pt-20">

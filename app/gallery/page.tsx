@@ -17,12 +17,13 @@ const galleryImages = [
   },
   {
     id: 2,
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/groupofboysflexingbody-kRBHd4n70SOwCCJG4IpCJ80jlqNhS6.jpg",
-    title: "Group Training",
-    description: "High-energy group workouts for motivation",
+    image: "/images/heavyexcercise.jpg",
+    title: "Barbell Squat",
+    description:
+      "Pushing through the squat rack with focus and power, legs driving every rep.",
     objectPosition: "center center",
   },
+
   {
     id: 3,
     image:
