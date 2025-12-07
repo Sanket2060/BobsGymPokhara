@@ -59,7 +59,7 @@ export default function HeroSplit() {
       {/* Right Image with Carousel */}
       <div className="hidden lg:block w-1/2 h-full relative">
         <Image
-          src={images[currentImageIndex] || "/placeholder.svg"}
+          src={"/professionalhelpingstudent.jpg"}
           alt="Fitness community"
           fill
           className="object-cover object-[50%_60%] transition-opacity duration-1000"
